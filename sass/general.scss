@@ -28,7 +28,6 @@ body {
   width: 100%;
 }
 .main {
-  width: 100%;
   min-height: 400px;
   background-color: $white;
 }
@@ -45,9 +44,9 @@ a {
   text-decoration: none;
   color: $white;
   transition: opacity .3s linear;
-  &:hover {
-    border-bottom: 2px solid rgba(255, 255, 255, .5);
-  }
+  //&:hover {
+  //  border-bottom: 2px solid rgba(255, 255, 255, .5);
+  //}
 }
 
 .button {
