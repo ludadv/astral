@@ -1,43 +1,42 @@
 
 .nav {
-  height: 72px;
+  height: 71px;
   list-style: none;
   text-decoration: none;
   margin: 0;
   text-align: center;
-
-  &__icon {
-  display: block;
-  font-size: 2.5rem;
-  line-height: 1;
-  color: rgba(255, 255, 255, .5);
-  }
 
   &__item {
     position: relative;
     display: inline-block;
     padding: 0 1.875rem;
     transition: background-color .3s linear;
+    color: rgba(255, 255, 255, .5);
+    i {
+      display: block;
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+    &.tab-active {
+      color: rgba(255, 255, 255, 1);
+    }
 
-    & .arrow {
-      opacity: 0;
-      //display: none;
+     .arrow {
+      display: none;
       position: absolute;
       top: 100%;
       border-top: 30px solid transparent;
       border-bottom: 30px solid transparent;
       border-right: 30px solid $white;
+      border-left: none;
+      outline: none;
+      background-color: transparent;
       left: 36%;
       transform: rotate(90deg) translateX(-50%);
       transition: opacity .3s linear;
-
-      &.arrow-active {
-        opacity: 1;
-        //display: block;
-        text-decoration: none;
-        color:rgba(255, 255, 255, 1);
-
-      }
+       &.open {
+        display: block;
+       }
     }
   }
 }
@@ -150,7 +149,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 1.5rem;
-  & .form {
+  .form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -166,10 +165,10 @@
       color: $grey;
     }
   }
-  & .col-6 {
+  .col-6 {
     width: 48%;
   }
-  & .col-12 {
+  .col-12 {
     width: 100%;
   }
 }

@@ -12,33 +12,40 @@
     <div class="wrapper">
         <div class="container">
             <ul class="nav">
-                <li class="nav__item js-tab tab-active" data-tab="1">
-                    <a href="#" class="nav__icon"><i class="fas fa-home"></i></a>
-                    <a href="#" class="arrow arrow-active" data-tab="1"></a>
+                <li class="nav__item js-tab tab-active" data-tab="home">
+    <!--                    <a href="#" class="nav__icon">-->
+                    <i class="fas fa-home"></i>
+                    <button class="arrow open"></button>
+    <!--                    </a>-->
+    <!--                    <a href="#" class="arrow arrow-active" data-tab="1"></a>-->
                 </li>
-                <li class="nav__item js-tab" data-tab="2">
-                    <a href="#" class="nav__icon"><i class="fas fa-folder"></i></a>
-                    <a href="#" class="arrow" data-tab="2"></a>
+                <li class="nav__item js-tab" data-tab="work">
+                    <i class="fas fa-folder"></i>
+                    <button class="arrow"></button>
+    <!--                    <a href="#" class="nav__icon"><i class="fas fa-folder"></i></a>-->
+    <!--                    <button class="arrow"></button>-->
                 </li>
-                <li class="nav__item js-tab" data-tab="3">
-                    <a href="#" class="nav__icon"><i class="fas fa-envelope"></i></a>
-                    <a href="#" class="arrow" data-tab="3"></a>
+                <li class="nav__item js-tab" data-tab="contact">
+                    <i class="fas fa-envelope"></i>
+                    <button class="arrow"></button>
+    <!--                    <a href="#" class="nav__icon"><i class="fas fa-envelope"></i></a>-->
+    <!--                    <button class="tab-active arrow"></button>-->
                 </li>
-            </ul> <!--/nav-->
+            </ul>
             <div class="main">
-                <section class="js-tab-content tab-item active" data-tab="1">
+                <section class="js-tab-content tab-item active" data-tab="home">
                     <div class="home">
                         <div class="home__content">
                             <div class="home__title">Jane Doe</div>
                             <div class="home__subtitle">Senior Astral Projectionist</div>
                         </div>
-                        <span class="js-arrow-right arrow-right"><i class="fas fa-angle-right"></i></span>
+                        <span class="nav__item js-tab arrow-right" data-tab="work"><i class="fas fa-angle-right"></i></span>
                         <div class="home__image">
                             <img src="http://placehold.it/340x400">
                         </div>
                     </div>
                 </section> <!--/home-->
-                <section class="js-tab-content tab-item" data-tab="2">
+                <section class="js-tab-content tab-item" data-tab="work">
                     <div class="work">
                         <div class="work__inner">
                             <div class="work__title">Work</div>
@@ -52,23 +59,23 @@
                                 luctus elit eget interdum.
                             </div>
                             <div class="work__img">
-                                <a class="work__item"><img src="http://placehold.it/250x187"></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187"></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187"></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187"></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187"></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187"></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187"></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187"></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187"></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187"></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187"></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187"></a>
+                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
+                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
+                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
+                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
+                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
+                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
+                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
+                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
+                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
+                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
+                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
+                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="js-tab-content tab-item"  data-tab="3">
+                <section class="js-tab-content tab-item"  data-tab="contact">
                     <div class="contact">
                         <div class="contact__title">Contact Me</div>
                         <form action="" class="form">
@@ -101,13 +108,17 @@
         $buttons.on( "click", function() {
             let num = $(this).data("tab");
             let $content = $(".js-tab-content[data-tab=" + num + "]");
-            let $arrow = $(".arrow[data-tab=" + num + "]");
+                let $arrow = $(".arrow[data-tab=" + num + "]");
 
-            $buttons.removeClass('tab-active');
+            $buttons
+                .removeClass('tab-active');
+            $arrows.removeClass('open');
+            // $arrow.addClass('open')
             $(this).addClass('tab-active');
 
-            $arrows.removeClass('arrow-active');
-            $arrow.addClass('arrow-active');
+
+            // $arrows.removeClass('arrow-active');
+            // $arrow.addClass('arrow-active');
 
 
             // $contents.slideUp().removeClass('active').promise().done(() => {
@@ -115,17 +126,17 @@
             // });
 
 
-            $contents.slideUp().fadeOut();
+            $contents.fadeOut();
             setTimeout(function() {
-                $content.slideDown().fadeIn();
-            }, 500);
+                $content.fadeIn();
+            },300);
         });
 
-        $right.on( "click", function() {
-            $( ".js-tab-content:first-child" ).slideUp().fadeOut();
-            $( ".js-tab-content:nth-child(2)" ).slideDown().fadeIn();
-
-        });
+        // $right.on( "click", function() {
+        //     $( ".js-tab-content:first-child" ).slideUp().fadeOut();
+        //     $( ".js-tab-content:nth-child(2)" ).slideDown().fadeIn();
+        //
+        // });
     </script>
 
 
