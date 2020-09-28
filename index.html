@@ -11,22 +11,20 @@
 <body>
     <div class="wrapper">
         <div class="container">
-            <div class="header">
-                <ul class="nav">
-                    <li class="nav__item js-tab tab-active" data-tab="1">
-                        <a href="#" class="fas fa-home"></a>
-                        <a href="#" class="arrow arrow-active" data-tab="1"></a>
-                    </li>
-                    <li class="nav__item js-tab" data-tab="2">
-                        <a href="#" class="fas fa-folder"></a>
-                        <a href="#" class="arrow" data-tab="2"></a>
-                    </li>
-                    <li class="nav__item js-tab" data-tab="3">
-                        <a href="#"><i class="fas fa-envelope"></i></a>
-                        <a href="#" class="arrow" data-tab="3"></a>
-                    </li>
-                </ul> <!--/nav-->
-            </div>
+            <ul class="nav">
+                <li class="nav__item js-tab tab-active" data-tab="1">
+                    <a href="#" class="nav__icon"><i class="fas fa-home"></i></a>
+                    <a href="#" class="arrow arrow-active" data-tab="1"></a>
+                </li>
+                <li class="nav__item js-tab" data-tab="2">
+                    <a href="#" class="nav__icon"><i class="fas fa-folder"></i></a>
+                    <a href="#" class="arrow" data-tab="2"></a>
+                </li>
+                <li class="nav__item js-tab" data-tab="3">
+                    <a href="#" class="nav__icon"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="arrow" data-tab="3"></a>
+                </li>
+            </ul> <!--/nav-->
             <div class="main">
                 <section class="js-tab-content tab-item active" data-tab="1">
                     <div class="home">
@@ -34,6 +32,7 @@
                             <div class="home__title">Jane Doe</div>
                             <div class="home__subtitle">Senior Astral Projectionist</div>
                         </div>
+                        <span class="js-arrow-right arrow-right"><i class="fas fa-angle-right"></i></span>
                         <div class="home__image">
                             <img src="http://placehold.it/340x400">
                         </div>
@@ -88,7 +87,7 @@
                     <li class="nav__item">Design: <a href="#">HTML5 UP</a></li>
                     <li class="nav__item">Demo Images: <a href="">Unsplash</a></li>
                 </ul>
-            </div>
+            </div>  <!--/footer-->
         </div>   <!--/container-->
     </div> <!--/wrapper-->
 
@@ -97,6 +96,8 @@
         let $buttons = $( ".js-tab" );
         let $contents = $( ".js-tab-content" );
         let $arrows = $( ".arrow" );
+        let $right = $( ".js-arrow-right" );
+
         $buttons.on( "click", function() {
             let num = $(this).data("tab");
             let $content = $(".js-tab-content[data-tab=" + num + "]");
@@ -114,10 +115,15 @@
             // });
 
 
-            $contents.slideUp().removeClass('active')
-                $content.slideDown().addClass("active");
+            $contents.slideUp().fadeOut();
+            setTimeout(function() {
+                $content.slideDown().fadeIn();
+            }, 500);
+        });
 
-
+        $right.on( "click", function() {
+            $( ".js-tab-content:first-child" ).slideUp().fadeOut();
+            $( ".js-tab-content:nth-child(2)" ).slideDown().fadeIn();
 
         });
     </script>
