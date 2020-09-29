@@ -14,15 +14,12 @@
             <ul class="nav">
                 <li class="nav__item js-tab tab-active" data-tab="home">
                     <i class="fas fa-home"></i>
-                    <button class="arrow open"></button>
                 </li>
                 <li class="nav__item js-tab" data-tab="work">
                     <i class="fas fa-folder"></i>
-                    <button class="arrow"></button>
                 </li>
                 <li class="nav__item js-tab" data-tab="contact">
                     <i class="fas fa-envelope"></i>
-                    <button class="arrow"></button>
                 </li>
             </ul>
             <div class="main">
@@ -32,51 +29,51 @@
                             <div class="home__title">Jane Doe</div>
                             <div class="home__subtitle">Senior Astral Projectionist</div>
                         </div>
-                        <span class="arrow-right js-arrow-right"><i class="fas fa-angle-right"></i></span>
                         <div class="home__image">
                             <img src="http://placehold.it/340x400">
+                            <span class="arrow-right js-tab" data-tab="work"><i class="fas fa-angle-right"></i></span>
                         </div>
                     </div>
                 </section> <!--/home-->
                 <section class="js-tab-content tab-item" data-tab="work">
                     <div class="work">
-                        <div class="work__inner">
-                            <div class="work__title">Work</div>
-                            <div class="work__text">
-                                Phasellus enim sapien, blandit
-                                ullamcorper elementum eu,
-                                condimentum eu elit.
-                                Vestibulum ante ipsum primis
-                                in faucibus orci luctus et
-                                ultrices posuere cubilia
-                                luctus elit eget interdum.
-                            </div>
-                            <div class="work__img">
-                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
-                                <a class="work__item"><img src="http://placehold.it/250x187" alt=""></a>
-                            </div>
+                        <div class="text-block">Work</div>
+                        <div class="work__text">
+                            Phasellus enim sapien, blandit
+                            ullamcorper elementum eu,
+                            condimentum eu elit.
+                            Vestibulum ante ipsum primis
+                            in faucibus orci luctus et
+                            ultrices posuere cubilia
+                            luctus elit eget interdum.
+                        </div>
+                        <div class="gallery">
+                            <a class="gallery__items"><img src="http://placehold.it/250x187" alt=""></a>
+                            <a class="gallery__items"><img src="http://placehold.it/250x187" alt=""></a>
+                            <a class="gallery__items"><img src="http://placehold.it/250x187" alt=""></a>
+                            <a class="gallery__items"><img src="http://placehold.it/250x187" alt=""></a>
+                            <a class="gallery__items"><img src="http://placehold.it/250x187" alt=""></a>
+                            <a class="gallery__items"><img src="http://placehold.it/250x187" alt=""></a>
+                            <a class="gallery__items"><img src="http://placehold.it/250x187" alt=""></a>
+                            <a class="gallery__items"><img src="http://placehold.it/250x187" alt=""></a>
+                            <a class="gallery__items"><img src="http://placehold.it/250x187" alt=""></a>
+                            <a class="gallery__items"><img src="http://placehold.it/250x187" alt=""></a>
+                            <a class="gallery__items"><img src="http://placehold.it/250x187" alt=""></a>
+                            <a class="gallery__items"><img src="http://placehold.it/250x187" alt=""></a>
                         </div>
                     </div>
                 </section>
                 <section class="js-tab-content tab-item"  data-tab="contact">
                     <div class="contact">
-                        <div class="contact__title">Contact Me</div>
+                        <div class="text-block">Contact Me</div>
                         <form action="" class="form">
-                            <input class="col-6 form__input" type="text" placeholder="Name">
-                            <input class="col-6 form__input" type="text" placeholder="Email">
-                            <input class="col-12 form__input" type="text" placeholder="Subject">
-                            <textarea class="col-12 form__input" placeholder="Message" rows="6"></textarea>
-                            <button  class="button" type="submit">Send Message</button>
+                            <div class="col-6"><input class="form__item" type="text" placeholder="Name"></div>
+                            <div class="col-6"><input class="form__item" type="text" placeholder="Email"></div>
+                            <div class="col-12"><input class="form__item" type="text" placeholder="Subject"></div>
+                            <div class="col-12">
+                                <textarea class="col-12 form__item" placeholder="Message" rows="6"></textarea>
+                            </div>
+                            <div class="col-12"><button  class="button" type="submit">Send Message</button></div>
                         </form>
                     </div>
                 </section>
@@ -84,8 +81,8 @@
             <div class="footer">
                 <ul class="nav">
                     <li class="nav__item">© Untitled.</li>
-                    <li class="nav__item">Design: <a href="#">HTML5 UP</a></li>
-                    <li class="nav__item">Demo Images: <a href="">Unsplash</a></li>
+                    <li class="nav__item">Design: <a href="#" target="_blank">HTML5 UP</a></li>
+                    <li class="nav__item">Demo Images: <a href="#" target="_blank"  >Unsplash</a></li>
                 </ul>
             </div>  <!--/footer-->
         </div>   <!--/container-->
@@ -95,47 +92,41 @@
     <script>
         let $buttons = $( ".js-tab" );
         let $contents = $( ".js-tab-content" );
-        let $arrows = $( ".arrow" );
 
-        $buttons.on( "click", function() {
+        $buttons.on( "click", function () {
             let $this = $(this);
             let num = $this.data("tab");
             let $content = $(".js-tab-content[data-tab=" + num + "]");
+            let $btns = $(".js-tab[data-tab=" + num + "]");
 
             $buttons.removeClass('tab-active');
-            $arrows.removeClass('open');
-            $this.addClass('tab-active');
-            $this.find('.arrow').addClass('open');
-
-
-
-
-            // $(".js-tab").closest('button').addClass('open')
-            // $arrow.addClass('open');
-            // $arrows.removeClass('arrow-active');
-            // $arrow.addClass('arrow-active');
-
-
-            // $contents.slideUp().removeClass('active').promise().done(() => {
-            //     $content.slideDown().addClass("active");
-            // });
-
+            $btns.addClass('tab-active');
 
             $contents.fadeOut();
             setTimeout(function() {
                 $content.fadeIn();
             },300);
+
         });
 
-        $(".js-arrow-right").on( "click", function() {
-            $('.js-tab[data-tab="work"]').click();
-        });
+        // $(".js-arrow-right").on( "click", function() {
+        //     $('.js-tab[data-tab="work"]').click();
+        // });
+        // $(".js-tab").closest('button').addClass('open')
+        // $arrow.addClass('open');
+        // $arrows.removeClass('arrow-active');
+        // $arrow.addClass('arrow-active');
 
+
+        // $contents.slideUp().removeClass('active').promise().done(() => {
+        //     $content.slideDown().addClass("active");
+        // });
         // $right.on( "click", function() {
         //     $( ".js-tab-content:first-child" ).slideUp().fadeOut();
         //     $( ".js-tab-content:nth-child(2)" ).slideDown().fadeIn();
         //
         // });
+
     </script>
 
 
